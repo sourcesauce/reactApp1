@@ -4,7 +4,8 @@ import Movie from "./Movie";
 
 
 const movies = [
-  {
+  { 
+
     title : "Matrix",
     poster : "https://www.thesun.co.uk/wp-content/uploads/2017/12/es-matrix-composite-twin-up-inset.jpg?strip=all&quality=100&w=750&h=500&crop=1"
   },
@@ -26,8 +27,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {movies.map(movies =>{
-          return <Movie title={movies.title} poster={movies.poster}/>
+        {movies.map((movies, index) =>{
+          return <Movie title={movies.title} poster={movies.poster} key={index}/>
         })}
       </div>
     );
