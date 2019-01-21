@@ -29,23 +29,26 @@ function Movie({title,poster,genres,synopsis}){
     </div>
   )
 }
-Movie.propTypes = {
-  title: PropTypes.string.isRequired,
-  poster: PropTypes.string.isRequired,
-  genres : PropTypes.array.isRquired,
-  synopsis : PropTypes.string.isRequired
-}
 
+//poster 이미지 태그 넣기
 function MoviePoster({poster, alt}) {
   return ( 
     <img src = {poster} alt = {alt} title = {alt} className="Movie__Poster" />
   )
 }
-
+//장르 span 으로 넣기
 function MovieGenre({genre}){
   return (
     <span className="Movie__Genre">{genre}</span>
   )
+}
+
+//props 데이터 검사
+Movie.propTypes = {
+  title: PropTypes.string.isRequired,
+  poster: PropTypes.string.isRequired,
+  genres : PropTypes.array.isRquired,
+  synopsis : PropTypes.string.isRequired
 }
 
 MoviePoster.propTypes = {
